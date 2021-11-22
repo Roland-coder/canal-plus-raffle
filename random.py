@@ -13,7 +13,7 @@ st.image(image, use_column_width=True)
 
 if st.button('Click Me'):
   colnames = ['Decoder Number']
-  df = pd.read_excel('canal%20decoder.xlsxe',names=colnames)
+  df = pd.read_excel('canal decoder.xlsx',names=colnames)
   df = df.sample(n=30)
   st.dataframe(df)
 else:
