@@ -20,7 +20,7 @@ if data_file is not None:
     df = pd.read_csv(data_file,names=colnames)
     df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
     df.index = df.index + 1
-    st.dataframe(df, width=500, height=1000)
+    st.dataframe(df, width=1000, height=1000)
   else:
     st.write('Thank You For Trusting Us')
 else:
