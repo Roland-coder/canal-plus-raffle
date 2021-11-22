@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 
-image = Image.open("draw.jpg")
+image = Image.open("canal.jpeg")
 st.image(image, use_column_width=True)
 
 
