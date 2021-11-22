@@ -10,11 +10,16 @@ st.image(image, use_column_width=True)
 
 st.title("CANAL+ CHRISTMAS RAFFLE DRAW APP")
 st.write("Click the button below to get 30 random decoder numbers")
-
-if st.button('Click Me'):
-  colnames = ['Decoder Number']
-  df = pd.read_csv('canalDecoder.csv',names=colnames)
-  df = df.sample(n=30)
-  st.dataframe(df, width=500, height=1000)
-else:
-  st.write('Thank You For Trusting Us')
+if data_file = st.file_uploader("Upload CSV",type=["csv"]):
+  if data_file is not None:
+    
+    if st.button('Click Me'):
+      st.write(file_details)
+      colnames = ['Decoder Number']
+      df = pd.read_csv(data_file,names=colnames)
+      df = df.sample(n=30)
+      st.dataframe(df, width=500, height=1000)
+    else:
+      st.write('Thank You For Trusting Us')
+  else:
+    st.write("You did not enter a valid file type")
