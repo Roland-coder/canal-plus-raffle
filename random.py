@@ -4,12 +4,12 @@ import numpy as np
 from PIL import Image
 
 
-st.title("CANAL+ RAFFLE DRAW APP")
-st.header("CANAL+ CHRISTMAS RAFFLE DRAW APP")
-st.write("Click the button below to get 30 random decoder numbers")
-
 image = Image.open("draw.jpg")
 st.image(image, use_column_width=True)
+
+
+st.title("CANAL+ CHRISTMAS RAFFLE DRAW APP")
+st.write("Click the button below to get 30 random decoder numbers")
 
 if st.button('Click Me'):
   colnames = ['Decoder Number']
