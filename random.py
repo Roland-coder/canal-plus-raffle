@@ -18,7 +18,8 @@ if data_file is not None:
     st.write(file_details)
     colnames = ['Decoder Number']
     df = pd.read_csv(data_file,names=colnames)
-    df = df.sample(n=30).reset_index( np.arange(1, len(df)+1)).rename({'index':'Column Number'}, axis = 'columns')
+    df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
+    df.index += 2
     st.dataframe(df, width=500, height=1000)
   else:
     st.write('Thank You For Trusting Us')
