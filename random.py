@@ -15,6 +15,6 @@ if st.button('Click Me'):
   colnames = ['Decoder Number']
   df = pd.read_csv('canalDecoder.csv',names=colnames)
   df = df.sample(n=30)
-  st.dataframe(df, width=100, height=100)
+  st.dataframe(df, width=500, height=1000)
 else:
   st.write('Thank You For Trusting Us')
