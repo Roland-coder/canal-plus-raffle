@@ -18,7 +18,7 @@ if data_file is not None:
     st.write(file_details)
     colnames = ['Decoder Number','Date of Renewal','Bouquet','Distributor']
     df = pd.read_csv(data_file,names=colnames)
-    df.index = np.arange(1, len(df))
+    df.index = df.index + 1
     df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
     df.index = df.index + 1
     st.dataframe(df, width=1000, height=1000)
