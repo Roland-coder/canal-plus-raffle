@@ -16,8 +16,7 @@ if data_file is not None:
     file_details = {"filename":data_file.name, "filetype":data_file.type,
                             "filesize":data_file.size}
     st.write(file_details)
-    colnames = ['Decoder Number','Date of Renewal','Bouquet','Distributor']
-    df = pd.read_csv(data_file,names=colnames)
+    df = pd.read_csv(data_file)
     df.index = df.index + 1
     df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
     df.index = df.index + 1
