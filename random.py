@@ -25,7 +25,7 @@ if data_file is not None:
       return df.to_csv().encode('utf-8')
     csv = convert_df(df)
     st.download_button(
-      "Press to Download",
+      "Download File",
       csv,
       "winners.csv",
       "text/csv",
