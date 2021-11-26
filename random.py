@@ -21,7 +21,7 @@ if data_file is not None:
     df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
     df.index = df.index + 1
     st.dataframe(df, width=1000, height=1000)
-    df.to_excel(r'C:\Users\User\Downloads\Winners.xlsx', index = False)
+    df.to_csv('Winners.csv')
   else:
     st.write('Thank You For Trusting Us')
 else:
