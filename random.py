@@ -21,7 +21,16 @@ if data_file is not None:
     df = df.sample(n=30).reset_index().rename({'index':'Column Number'}, axis = 'columns')
     df.index = df.index + 1
     st.dataframe(df, width=1000, height=1000)
-    df.to_csv('Winners.csv')
+    def convert_df(df):
+      return df.to_csv().encode('utf-8')
+    csv = convert_df(df)
+    st.download_button(
+      "Press to Download",
+      csv,
+      "winners.csv",
+      "text/csv",
+      key='download-csv'
+    )
   else:
     st.write('Thank You For Trusting Us')
 else:
